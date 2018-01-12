@@ -6,10 +6,8 @@ from collections import deque
 import math
 from copy import deepcopy
 class Graph():
-
 	def __init__(self):
 		self.node_n={}
-
 	def add_nodes(self,nodelist):
 		for i in nodelist:
 			self.add_node(i)
@@ -23,13 +21,41 @@ class Graph():
 		self.add_nodes(edge)#
 		if (v not in self.node_n[u]):# and (u not in self.node_n[v]):#为什么要求u not in v呢?
 			self.node_n[u].append(v)#u->v
-		#if u !=v:
-		#	self.node_n[v].append(u)
 	#获取dict的关键字集合,即节点name
 	def nodes(self):
 		return self.node_n.keys()
+	def getblockMatrix(self):
+		nodes=list(self.nodes())
+		lens=len(nodes)
+		self.block_cap=2000
+		self.blocks = math.ceil(lens / self.block_cap)
+		# 得到分段的R值
+		self.R = [nodes[i - self.block_cap:i] for i in range(self.block_cap, lens + self.block_cap, self.block_cap)]
+		# self.blockdict={node:blocknum for node,blocknum in zip(nodes,range(0,lens))}
+		self.Matric={}
+		# 根据分段的R，对M做分块，把M分为只包含R中每段值的Matrix
+		for i in range(self.blocks):
+			# 对每一个点
+			self.Matric[i] = []
+		for i in range(len(nodes)):
+			if i%1000==0:
+				print("i=%d" % (i))
+			node = nodes[i]
+			blocknum=math.floor(i/self.block_cap)
+			degree=len(self.node_n[node])
+			src=node
+			destination = [outdgree for outdgree in self.node_n[node] if outdgree in self.R[blocknum]]
+				# for outdgree in self.node_n[node]:
+				#	#对每个输出度,如果属于输出rnew的节点，则保留
+				#	if outdgree in self.R[i]:
+				#		tmp.append(outdgree)
+			if len(destination) > 0:
+				tmp=[src,degree]
+				tmp.extend(destination)
+				self.Matric[blocknum].append(tmp)
+		return self.R, self.Matric
 
-def getGraph(data_file="data/simpletest"):
+def getGraph(data_file="data/WikiData.txt"):
 	g = Graph()
 	dataFile = open(data_file)
 	for line in dataFile:
@@ -123,9 +149,9 @@ class GraphWithBlock():
 			for node in nodes:
 				tmp=[outdgree for outdgree in self.node_n[node] if outdgree in self.R[i]]
 				# for outdgree in self.node_n[node]:
-				# 	#对每个输出度,如果属于输出rnew的节点，则保留
-				# 	if outdgree in self.R[i]:
-				# 		tmp.append(outdgree)
+				#	#对每个输出度,如果属于输出rnew的节点，则保留
+				#	if outdgree in self.R[i]:
+				#		tmp.append(outdgree)
 				if len(tmp)>0:
 					Mblocks[node]=tmp
 			#对分块的矩阵做融合
@@ -141,8 +167,8 @@ class GraphWithBlock():
 
 
 if __name__ == '__main__':
-	# g=getGraph()
-	# R,M=getRandM()
-	g=GraphWithBlock()
-	R,M=g.getRandM()
-	# print('asdf')
+	g=getGraph()
+	R,M=g.getblockMatrix()
+	# g=GraphWithBlock()
+	# R,M=g.getRandM()
+	print('asdf')
