@@ -18,6 +18,7 @@ class Graph():
 
 	def add_edge(self,edge):
 		u,v=edge
+		self.add_nodes(edge)#
 		if (v not in self.node_n[u]):# and (u not in self.node_n[v]):#为什么要求u not in v呢?
 			self.node_n[u].append(v)#u->v
 		#if u !=v:
@@ -26,3 +27,24 @@ class Graph():
 	def nodes(self):
 		return self.node_n.keys()
 
+def getGraph(data_file="data/simpletest"):
+	g = Graph()
+	dataFile = open(data_file)
+	for line in dataFile:
+		data=line.strip().split()
+		if len(data)!=2:
+			print('src data read error!')
+		A = data[0]
+		B = data[1]
+		# self.List.append(A)
+		# self.List.append(B)
+		#添加边倒节点，如果边的节点不存在，则添加该节点
+		g.add_edge((A,B))
+	dataFile.close()
+	return g
+
+
+
+if __name__ == '__main__':
+	g=getGraph()
+	print('asdf')
