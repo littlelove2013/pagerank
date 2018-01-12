@@ -11,19 +11,20 @@
 #
 import itertools
 class MapReduce:
-    #mapper和reducer是传递的函数地址
+
     def map_reduce(i, mapper, reducer):
         """
         map_reduce方法
         :param i: 需要MapReduce的集合
-        :param mapper: 自定义mapper方法: 如果没有出链，即dead end，那么就返回[(1,这个网页的PR值)]；否则就返回[]
-        :param reducer: 自定义reducer方法: 所有dead end的PR值之和
+        :param mapper: 自定义mapper方法
+        :param reducer: 自定义reducer方法
         :return: 以自定义reducer方法的返回值为元素的一个列表
         """
         intermediate = []  # 存放所有的(intermediate_key, intermediate_value)
         for (key, value) in i.items():
             intermediate.extend(mapper(key, value))
 
+        # print(intermediate)
         # sorted返回一个排序好的list，因为list中的元素是一个个的tuple，key设定按照tuple中第几个元素排序
         # groupby把迭代器中相邻的重复元素挑出来放在一起,key设定按照tuple中第几个元素为关键字来挑选重复元素
         # 下面的循环中groupby返回的key是intermediate_key，而group是个list，是1个或多个
@@ -31,6 +32,7 @@ class MapReduce:
         groups = {}
         for key, group in itertools.groupby(sorted(intermediate, key=lambda im: im[0]), key=lambda x: x[0]):
             groups[key] = [y for x, y in group]
+
         # groups是一个字典，其key为上面说到的intermediate_key，value为所有对应intermediate_key的intermediate_value
         # 组成的一个列表
         return [reducer(intermediate_key, groups[intermediate_key]) for intermediate_key in groups]
@@ -46,14 +48,14 @@ class pagerank:
         self.min_delta = 0.00001             # 确定迭代是否结束的参数,即ϵ
         self.num_of_pages = len(dg.nodes())  # 总网页数
 
-        # graph表示整个网络图。是字典类型。
+        # graph表示整个网络图。是字典类型,表示矩阵M。
         # graph[i][0] 存放第i网页的PR值，初始化为1/N，N为总的网页数
         # graph[i][1] 存放第i网页的出链数量
         # graph[i][2] 存放第i网页的出链网页，是一个列表
         self.graph = {}
         for node in dg.nodes():
             self.graph[node] = [1.0 / self.num_of_pages, len(dg.node_n[node]), dg.node_n[node]]
-
+        # print(self.graph)
     def ip_mapper(self, input_key, input_value):
         """
         看一个网页是否有出链，返回值中的 1 没有什么物理含义，只是为了在
@@ -63,7 +65,6 @@ class pagerank:
         :param input_value: self.graph[input_key]
         :return: 如果没有出链，即dead end，那么就返回[(1,这个网页的PR值)]；否则就返回[]
         """
-        #input_value为一个graph的点,值为[PR值,出链数量,出链表]
         if input_value[1] == 0:
             return [(1, input_value[0])]
         else:
@@ -78,6 +79,18 @@ class pagerank:
         """
         return sum(input_value_list)
 
+    def S_mapper(self, input_key, input_value):
+        """
+        计算最终算法的S值，保证后面项的数值在迭代过程中和为1
+        """
+        return [(input_key,input_value[0])]
+
+
+    def S_reducer(self, input_key, input_value_list):
+        
+        return self.damping_factor * sum(input_value_list)
+
+
     def pr_mapper(self, input_key, input_value):
         """
         mapper方法
@@ -85,9 +98,11 @@ class pagerank:
         :param input_value: self.graph[input_key]，即这个网页的相关信息
         :return: [(网页名, 0.0), (出链网页1, 出链网页1分得的PR值), (出链网页2, 出链网页2分得的PR值)...]
         """
+
         return [(input_key, 0.0)] + [(out_link, input_value[0] / input_value[1]) for out_link in input_value[2]]
 
-    def pr_reducer_inter(self, intermediate_key, intermediate_value_list, dp):
+    
+    def pr_reducer_inter(self, intermediate_key, intermediate_value_list, dp, S):
         """
         reducer方法
         :param intermediate_key: 网页名，如 A
@@ -96,10 +111,12 @@ class pagerank:
         :return: (网页名，计算所得的PR值)
         对应公式：
         """
+        # print(intermediate_value_list)
+
         return (intermediate_key,
                 self.damping_factor * sum(intermediate_value_list) +
                 self.damping_factor * dp / self.num_of_pages +
-                (1.0 - self.damping_factor) / self.num_of_pages)
+                (1.0 - S) / self.num_of_pages)
 
     def page_rank(self):
         """
@@ -120,13 +137,14 @@ class pagerank:
                 dp = dangling_list[0]
             else:
                 dp = 0
-
+            S_valuelist = MapReduce.map_reduce(self.graph, self.S_mapper, self.S_reducer)
+            S_value = sum(S_valuelist)
             # 因为MapReduce.map_reduce中要求的reducer只能有两个参数，而我们
             # 需要传3个参数（多了一个所有dead end的PR值之和,即dp），所以采用
             # 下面的lambda表达式来达到目的
             # new_pr为一个列表，元素为:(网页名，计算所得的PR值)
-            new_pr = MapReduce.map_reduce(self.graph, self.pr_mapper, lambda x, y: self.pr_reducer_inter(x, y, dp))
-
+            new_pr = MapReduce.map_reduce(self.graph, self.pr_mapper, lambda x, y: self.pr_reducer_inter(x, y, dp, S_value))
+            # print(new_pr)
             # 计算此轮PR值的变化情况
             change = sum([abs(new_pr[i][1] - self.graph[new_pr[i][0]][0]) for i in range(self.num_of_pages)])
             print("Change: " + str(change))
