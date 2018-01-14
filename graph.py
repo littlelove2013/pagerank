@@ -58,7 +58,7 @@ class Graph():
 				self.Source[blocknum].append(src)
 		# return self.R, self.Matric
 		return self.Matric,self.Source,self.blocks
-def getGraph(data_file="data/simpletest.txt"):
+def getGraph(data_file="data/WikiData.txt"):
 	g = Graph()
 	dataFile = open(data_file)
 	for line in dataFile:
