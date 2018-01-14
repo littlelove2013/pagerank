@@ -42,8 +42,8 @@ class MapReduce:
 #
 class pagerank:
 
-    def __init__(self, dg):
-        self.damping_factor = 0.85           # 阻尼系数,即α
+    def __init__(self, dg, block):
+        self.damping_factor = 0.8           # 阻尼系数,即α
         self.max_iterations = 100            # 最大迭代次数
         self.min_delta = 0.00001             # 确定迭代是否结束的参数,即ϵ
         self.num_of_pages = len(dg.nodes())  # 总网页数
@@ -52,7 +52,11 @@ class pagerank:
         # graph[i][0] 存放第i网页的PR值，初始化为1/N，N为总的网页数
         # graph[i][1] 存放第i网页的出链数量
         # graph[i][2] 存放第i网页的出链网页，是一个列表
+        Matrix,SP,blocks = dg.getblockMatrix()
         self.graph = {}
+        for i in SP[block]:
+            self.graph[i] = Matrix[block] 
+            
         for node in dg.nodes():
             self.graph[node] = [1.0 / self.num_of_pages, len(dg.node_n[node]), dg.node_n[node]]
         # print(self.graph)

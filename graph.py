@@ -33,10 +33,12 @@ class Graph():
 		self.R = [nodes[i - self.block_cap:i] for i in range(self.block_cap, lens + self.block_cap, self.block_cap)]
 		# self.blockdict={node:blocknum for node,blocknum in zip(nodes,range(0,lens))}
 		self.Matric={}
+		self.Source={}
 		# 根据分段的R，对M做分块，把M分为只包含R中每段值的Matrix
 		for i in range(self.blocks):
 			# 对每一个点
 			self.Matric[i] = []
+			self.Source[i] = []
 		for i in range(len(nodes)):
 			if i%1000==0:
 				print("i=%d" % (i))
@@ -50,12 +52,13 @@ class Graph():
 				#	if outdgree in self.R[i]:
 				#		tmp.append(outdgree)
 			if len(destination) > 0:
-				tmp=[src,degree]
-				tmp.extend(destination)
+				tmp=[src,1.0 / self.block_cap,degree]
+				tmp.append(destination)
 				self.Matric[blocknum].append(tmp)
-		return self.R, self.Matric
-
-def getGraph(data_file="data/WikiData.txt"):
+				self.Source[blocknum].append(src)
+		# return self.R, self.Matric
+		return self.Matric,self.Source,self.blocks
+def getGraph(data_file="data/simpletest.txt"):
 	g = Graph()
 	dataFile = open(data_file)
 	for line in dataFile:
@@ -166,7 +169,8 @@ def getGraph(data_file="data/WikiData.txt"):
 
 
 
-if __name__ == '__main__':
-	g=getGraph()
-	R,M=g.getblockMatrix()
-	print('asdf')
+# if __name__ == '__main__':
+# 	g=getGraph()
+# 	# M,s=g.getblockMatrix()
+# 	# print(s)
+# 	# print(M[0])

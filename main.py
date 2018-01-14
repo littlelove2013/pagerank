@@ -33,10 +33,15 @@ if __name__ == '__main__':
     #         B=line.strip().split('\t')[1]
     #         dg.add_edge((A, B))
     # f.close()
+    i = 0;page_ranks={}
     dg=graph.getGraph()
+    M,sp,blocks = dg.getblockMatrix()
     #print(dg.node_n)
-    pr = pagerank.pagerank(dg)
-    page_ranks = pr.page_rank()
+    #分块求解
+    while i < blocks:
+        pr = pagerank.pagerank(dg,i)
+        page_ranks = dict(page_ranks,**(pr.page_rank()))
+        i = i + 1
 
     print("The final page rank is saving...")
     with open("results/result.txt","w") as f_w:
@@ -45,5 +50,5 @@ if __name__ == '__main__':
             f_w.write(key + '\t\t' + str(value[0]) + '\n')
     f_w.close()
     print("The final page rank is okey.")
-    print(page_ranks.items())
+    # print(page_ranks.items())
 # input('请按任意键退出...')
