@@ -2,9 +2,7 @@
 # 
 # PageRank工程的Graph创建程序
 #
-from collections import deque
 import math
-from copy import deepcopy
 class Graph():
 	def __init__(self,block_cap):
 		self.block_cap = block_cap
