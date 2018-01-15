@@ -8,5 +8,9 @@
 import pagerank
 
 if __name__ == '__main__':
-    beta=0.85
-    pagerank.gcpagerank(beta)
+    beta=0.80
+    # srcfile = "data/WikiData.txt"
+    # block_cap=2000
+    srcfile="data/simpletest"
+    block_cap=2
+    pagerank.gcpagerank(beta,srcfile,block_cap)

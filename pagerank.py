@@ -164,12 +164,15 @@ class MapReduce:
 #         return self.graph
 
 
-def gcpagerank(beta=0.8):
+def gcpagerank(beta=0.8,srcfile="data/WikiData.txt",block_cap=2000):
     thre=1e-6
-    srcfile="data/WikiData.txt"
+    # srcfile="data/WikiData.txt"
+    # block_cap=2000
+    # srcfile="data/simpletest"
+    # block_cap=2
     print("----读取源数据\n\t待读取数据集为：%s"%(srcfile))
     start = time.time()
-    g=graph.getGraph(srcfile)
+    g=graph.getGraph(srcfile,block_cap)
     M,R,blocks,N=g.getblockMatrix()
     print('\t读取源数据为分块稀疏矩阵时间为：%fs\n'%(time.time()-start))
     print("----迭代求rank teleport parameter=%f"%(beta))
@@ -188,7 +191,7 @@ def gcpagerank(beta=0.8):
         S=0
         start = time.time()
         S=0
-        # rS=0
+        rS=0
         for i in range(blocks):
             m=M[i]#对于每一块
             r=R[i]
@@ -196,9 +199,9 @@ def gcpagerank(beta=0.8):
             for line in m:
                 src,blocknum,degree,outlink=line#因为抛弃了很多死节点，所以不存在degree==0的情况
                 for node in outlink:
-                    newR[i][node]+=R[blocknum][src]/degree
+                    newR[i][node]+=beta*R[blocknum][src]/degree
             S += sum(newR[i].values())
-            # rS += sum(R[i].values())
+            rS += sum(R[i].values())
         # print('new rank和%f,rank 和%f'%(S,rS))
         ttime+=time.time()-start
         # 对每个节点，再分配S/N的补偿
