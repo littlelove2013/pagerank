@@ -57,7 +57,11 @@ def gcpagerank(beta=0.8,srcfile="data/WikiData.txt",block_cap=2000):
             for node in newR[i].keys():
                 newR[i][node] +=p
             # 计算R[i]与newR[i]的差值
-            l1 += sum([abs(c - d) for c, d in zip(R[i].values(), newR[i].values())])
+            RR =[];NN =[];j=0;
+            for j in R[i].keys():  
+                RR.append(R[i][j])
+                NN.append(newR[i][j])
+            l1 += sum([abs(c - d) for c, d in zip(RR, NN)])
             ttime += time.time() - start
             tS+=sum(newR[i].values())
         #显示
