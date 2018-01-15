@@ -63,7 +63,7 @@ def gcpagerank(beta=0.8,srcfile="data/WikiData.txt",block_cap=2000):
         #显示
         print('\t迭代次数：%d ,\trank总和：%f,\tS(new rank)=%f, \tl1=%e'%(iter,tS,S,l1))
         #将newR赋值给R
-        R=newR
+        R=newR.copy()
     itime=ttime/iter
     print('\t平均每次迭代时间：%f,总的迭代时间：%f\n'%(itime,ttime))
     print("----保存数据")

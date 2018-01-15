@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7e1936dc-8cb6-4bb7-83ac-3a164d7508fb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/pagerank.py" afterPath="$PROJECT_DIR$/pagerank.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,7 +15,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/pangrank$pagerank.coverage" NAME="pagerank Coverage Results" MODIFIED="1516014019362" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pagerank$main.coverage" NAME="main Coverage Results" MODIFIED="1515726124433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/pangrank$main.coverage" NAME="main Coverage Results" MODIFIED="1516018065874" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pangrank$main.coverage" NAME="main Coverage Results" MODIFIED="1516019151155" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pagerank$graph.coverage" NAME="graph Coverage Results" MODIFIED="1515725861872" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pangrank$graph.coverage" NAME="graph Coverage Results" MODIFIED="1516005308407" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
@@ -23,15 +24,13 @@
       <file leaf-file-name="graph.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/graph.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="11" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+            <state relative-caret-position="164">
+              <caret line="78" column="20" lean-forward="true" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
               <folding>
                 <element signature="e#78#2063#0" expanded="false" />
                 <element signature="e#204#242#0" expanded="false" />
                 <element signature="e#307#359#0" expanded="false" />
                 <element signature="e#599#624#0" expanded="false" />
-                <element signature="e#2125#2432#0" expanded="false" />
-                <element signature="e#2204#2404#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -47,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="215">
+              <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -77,18 +76,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pagerank.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pagerank.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pagerank.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="231">
+              <caret line="67" column="52" lean-forward="true" selection-start-line="67" selection-start-column="52" selection-end-line="67" selection-end-column="52" />
               <folding>
                 <element signature="e#109#121#0" expanded="true" />
-                <element signature="e#688#1808#0" expanded="false" />
                 <element signature="e#841#1204#0" expanded="false" />
                 <element signature="e#1392#1681#0" expanded="false" />
-                <element signature="e#2091#2365#0" expanded="false" />
+                <element signature="e#2098#2372#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -461,7 +469,14 @@
       <option name="project" value="LOCAL" />
       <updated>1516017991446</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="1、写好了关于分块矩阵存储的rank算法gcpagerank&#10;2、添加文字说明&#10;3、输出top100的文档&#10;4、给死节点添加了指向自身的边&#10;5、去掉对numpy的引用">
+      <created>1516018316343</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1516018316343</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -470,7 +485,7 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.56461537" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -547,8 +562,6 @@
             <element signature="e#204#242#0" expanded="false" />
             <element signature="e#307#359#0" expanded="false" />
             <element signature="e#599#624#0" expanded="false" />
-            <element signature="e#2125#2432#0" expanded="false" />
-            <element signature="e#2204#2404#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -583,10 +596,9 @@
           <caret line="40" column="14" lean-forward="true" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
           <folding>
             <element signature="e#109#121#0" expanded="true" />
-            <element signature="e#688#1808#0" expanded="false" />
             <element signature="e#841#1204#0" expanded="false" />
             <element signature="e#1392#1681#0" expanded="false" />
-            <element signature="e#2091#2365#0" expanded="false" />
+            <element signature="e#2098#2372#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -600,8 +612,6 @@
             <element signature="e#204#242#0" expanded="false" />
             <element signature="e#307#359#0" expanded="false" />
             <element signature="e#599#624#0" expanded="false" />
-            <element signature="e#2125#2432#0" expanded="false" />
-            <element signature="e#2204#2404#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -628,10 +638,9 @@
           <caret line="79" column="36" lean-forward="false" selection-start-line="79" selection-start-column="36" selection-end-line="79" selection-end-column="36" />
           <folding>
             <element signature="e#109#121#0" expanded="true" />
-            <element signature="e#688#1808#0" expanded="false" />
             <element signature="e#841#1204#0" expanded="false" />
             <element signature="e#1392#1681#0" expanded="false" />
-            <element signature="e#2091#2365#0" expanded="false" />
+            <element signature="e#2098#2372#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -653,8 +662,6 @@
             <element signature="e#204#242#0" expanded="false" />
             <element signature="e#307#359#0" expanded="false" />
             <element signature="e#599#624#0" expanded="false" />
-            <element signature="e#2125#2432#0" expanded="false" />
-            <element signature="e#2204#2404#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -689,10 +696,9 @@
           <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding>
             <element signature="e#109#121#0" expanded="true" />
-            <element signature="e#688#1808#0" expanded="false" />
             <element signature="e#841#1204#0" expanded="false" />
             <element signature="e#1392#1681#0" expanded="false" />
-            <element signature="e#2091#2365#0" expanded="false" />
+            <element signature="e#2098#2372#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -745,21 +751,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/graph.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="11" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-          <folding>
-            <element signature="e#78#2063#0" expanded="false" />
-            <element signature="e#204#242#0" expanded="false" />
-            <element signature="e#307#359#0" expanded="false" />
-            <element signature="e#599#624#0" expanded="false" />
-            <element signature="e#2125#2432#0" expanded="false" />
-            <element signature="e#2204#2404#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/results/top100_tp(0.85)_rankresult.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -784,25 +775,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pagerank.py">
+    <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="e#109#121#0" expanded="true" />
-            <element signature="e#688#1808#0" expanded="false" />
-            <element signature="e#841#1204#0" expanded="false" />
-            <element signature="e#1392#1681#0" expanded="false" />
-            <element signature="e#2091#2365#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="215">
+          <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="78" column="20" lean-forward="true" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
+          <folding>
+            <element signature="e#78#2063#0" expanded="false" />
+            <element signature="e#204#242#0" expanded="false" />
+            <element signature="e#307#359#0" expanded="false" />
+            <element signature="e#599#624#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pagerank.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="67" column="52" lean-forward="true" selection-start-line="67" selection-start-column="52" selection-end-line="67" selection-end-column="52" />
+          <folding>
+            <element signature="e#109#121#0" expanded="true" />
+            <element signature="e#841#1204#0" expanded="false" />
+            <element signature="e#1392#1681#0" expanded="false" />
+            <element signature="e#2098#2372#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
