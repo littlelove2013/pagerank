@@ -57,17 +57,18 @@ def gcpagerank(beta=0.8,srcfile="data/WikiData.txt",block_cap=2000):
             for node in newR[i].keys():
                 newR[i][node] +=p
             # 计算R[i]与newR[i]的差值
-            RR =[];NN =[];j=0;
-            for j in R[i].keys():  
-                RR.append(R[i][j])
-                NN.append(newR[i][j])
-            l1 += sum([abs(c - d) for c, d in zip(RR, NN)])
+            # RR =[];NN =[];j=0;
+            # for j in R[i].keys():
+            #     RR.append(R[i][j])
+            #     NN.append(newR[i][j])
+            # l1 += sum([abs(c - d) for c, d in zip(RR, NN)])
+            l1 += sum([abs(newR[i][key] - R[i][key]) for key in R[i].keys()])
             ttime += time.time() - start
             tS+=sum(newR[i].values())
         #显示
         print('\t迭代次数：%d ,\trank总和：%f,\tS(new rank)=%f, \tl1=%e'%(iter,tS,S,l1))
         #将newR赋值给R
-        R=newR.copy()
+        R=newR
     itime=ttime/iter
     print('\t平均每次迭代时间：%f,总的迭代时间：%f\n'%(itime,ttime))
     print("----保存数据")
