@@ -2,36 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e1936dc-8cb6-4bb7-83ac-3a164d7508fb" name="Default" comment="1、写好了关于分块矩阵存储的rank算法gcpagerank&#10;2、添加文字说明&#10;3、输出top100的文档&#10;4、给死节点添加了指向自身的边&#10;5、去掉对numpy的引用&#10;6、解决python3.6以下bug的问题：在3.6一下dict内是无序的。&#10;7、添加判断results路径是否存在">
+      <change beforePath="" afterPath="$PROJECT_DIR$/windows/api-ms-win-crt-heap-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/windows/api-ms-win-crt-locale-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/windows/api-ms-win-crt-math-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/windows/api-ms-win-crt-runtime-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/windows/api-ms-win-crt-stdio-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/windows/data/WikiData.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/windows/data/simpletest" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/windows/lib/_bz2.pyd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/windows/lib/_hashlib.pyd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/windows/lib/_lzma.pyd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/windows/lib/_socket.pyd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/windows/lib/_ssl.pyd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/windows/lib/email/architecture.rst" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/windows/lib/library.zip" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/windows/lib/pydoc_data/_pydoc.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/windows/lib/pyexpat.pyd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/windows/lib/select.pyd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/windows/lib/unicodedata.pyd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/windows/main.exe" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/windows/python35.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/windows/results/WikiData_top100_tp(0.85)_rankresult.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/windows/results/WikiData_tp(0.85)_rankresult.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/windows/results/all_tp(0.85)_rankresult.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/windows/results/simpletest_top100_tp(0.8)_rankresult.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/windows/results/simpletest_tp(0.8)_rankresult.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/windows/results/top100_tp(0.85)_rankresult.txt" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Matrixproc.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/exe.win-amd64-3.5/VCRUNTIME140.dll" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/exe.win-amd64-3.5/lib/_bz2.pyd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/exe.win-amd64-3.5/lib/_hashlib.pyd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/exe.win-amd64-3.5/lib/_lzma.pyd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/exe.win-amd64-3.5/lib/_socket.pyd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/exe.win-amd64-3.5/lib/_ssl.pyd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/exe.win-amd64-3.5/lib/email/architecture.rst" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/exe.win-amd64-3.5/lib/library.zip" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/exe.win-amd64-3.5/lib/pydoc_data/_pydoc.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/exe.win-amd64-3.5/lib/pyexpat.pyd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/exe.win-amd64-3.5/lib/select.pyd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/exe.win-amd64-3.5/lib/unicodedata.pyd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/exe.win-amd64-3.5/main.exe" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/exe.win-amd64-3.5/python35.dll" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/_bz2.pyd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/_hashlib.pyd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/_lzma.pyd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/_socket.pyd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/_ssl.pyd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/email/architecture.rst" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/library.zip" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/pydoc_data/_pydoc.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/pyexpat.pyd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/select.pyd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/unicodedata.pyd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pagerank.py" afterPath="$PROJECT_DIR$/pagerank.py" />
-      <change beforePath="$PROJECT_DIR$/setup.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/test.py" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -67,8 +64,20 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            <state relative-caret-position="171">
+              <caret line="15" column="47" lean-forward="false" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+              <folding>
+                <element signature="e#127#287#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="architecture.rst" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/windows/lib/email/architecture.rst">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" column="8" lean-forward="true" selection-start-line="3" selection-start-column="8" selection-end-line="6" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -104,11 +113,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pagerank.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pagerank.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pagerank.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="78" column="39" lean-forward="true" selection-start-line="78" selection-start-column="39" selection-end-line="78" selection-end-column="39" />
+            <state relative-caret-position="130">
+              <caret line="79" column="29" lean-forward="false" selection-start-line="79" selection-start-column="29" selection-end-line="79" selection-end-column="29" />
               <folding>
                 <element signature="e#109#121#0" expanded="true" />
                 <element signature="e#851#1214#0" expanded="false" />
@@ -208,16 +217,6 @@
               <item name="pangrank" type="b2602c69:ProjectViewProjectNode" />
               <item name="pangrank" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="pangrank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pangrank" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pangrank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pangrank" type="462c0819:PsiDirectoryNode" />
-              <item name="results" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -232,6 +231,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\python_workspace\git\pangrank" />
       <recent name="E:\python_workspace\git\pangrank\data" />
     </key>
   </component>
@@ -395,7 +395,21 @@
       <option name="project" value="LOCAL" />
       <updated>1516064896766</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="1、写好了关于分块矩阵存储的rank算法gcpagerank&#10;2、添加文字说明&#10;3、输出top100的文档&#10;4、给死节点添加了指向自身的边&#10;5、去掉对numpy的引用&#10;6、解决python3.6以下bug的问题：在3.6一下dict内是无序的。&#10;7、添加判断results路径是否存在">
+      <created>1516181566503</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1516181566503</updated>
+    </task>
+    <task id="LOCAL-00011" summary="1、写好了关于分块矩阵存储的rank算法gcpagerank&#10;2、添加文字说明&#10;3、输出top100的文档&#10;4、给死节点添加了指向自身的边&#10;5、去掉对numpy的引用&#10;6、解决python3.6以下bug的问题：在3.6一下dict内是无序的。&#10;7、添加判断results路径是否存在">
+      <created>1516182243446</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1516182243446</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -464,7 +478,8 @@
     <MESSAGE value="1、写好了关于分块矩阵存储的rank算法gcpagerank&#10;2、添加文字说明&#10;3、输出top100的文档&#10;4、给死节点添加了指向自身的边" />
     <MESSAGE value="1、写好了关于分块矩阵存储的rank算法gcpagerank&#10;2、添加文字说明&#10;3、输出top100的文档&#10;4、给死节点添加了指向自身的边&#10;5、去掉对numpy的引用" />
     <MESSAGE value="1、写好了关于分块矩阵存储的rank算法gcpagerank&#10;2、添加文字说明&#10;3、输出top100的文档&#10;4、给死节点添加了指向自身的边&#10;5、去掉对numpy的引用&#10;6、解决python3.6以下bug的问题：在3.6一下dict内是无序的。" />
-    <option name="LAST_COMMIT_MESSAGE" value="1、写好了关于分块矩阵存储的rank算法gcpagerank&#10;2、添加文字说明&#10;3、输出top100的文档&#10;4、给死节点添加了指向自身的边&#10;5、去掉对numpy的引用&#10;6、解决python3.6以下bug的问题：在3.6一下dict内是无序的。" />
+    <MESSAGE value="1、写好了关于分块矩阵存储的rank算法gcpagerank&#10;2、添加文字说明&#10;3、输出top100的文档&#10;4、给死节点添加了指向自身的边&#10;5、去掉对numpy的引用&#10;6、解决python3.6以下bug的问题：在3.6一下dict内是无序的。&#10;7、添加判断results路径是否存在" />
+    <option name="LAST_COMMIT_MESSAGE" value="1、写好了关于分块矩阵存储的rank算法gcpagerank&#10;2、添加文字说明&#10;3、输出top100的文档&#10;4、给死节点添加了指向自身的边&#10;5、去掉对numpy的引用&#10;6、解决python3.6以下bug的问题：在3.6一下dict内是无序的。&#10;7、添加判断results路径是否存在" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -558,7 +573,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-          <folding />
+          <folding>
+            <element signature="e#127#287#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -586,7 +603,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
           <caret line="38" column="31" lean-forward="false" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
-          <folding />
+          <folding>
+            <element signature="e#127#287#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -634,7 +653,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
           <caret line="38" column="31" lean-forward="false" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
-          <folding />
+          <folding>
+            <element signature="e#127#287#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -682,7 +703,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
-          <folding />
+          <folding>
+            <element signature="e#127#287#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -792,14 +815,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Matrixproc.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -818,13 +833,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pagerank.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="78" column="39" lean-forward="true" selection-start-line="78" selection-start-column="39" selection-end-line="78" selection-end-column="39" />
+        <state relative-caret-position="130">
+          <caret line="79" column="29" lean-forward="false" selection-start-line="79" selection-start-column="29" selection-end-line="79" selection-end-column="29" />
           <folding>
             <element signature="e#109#121#0" expanded="true" />
             <element signature="e#851#1214#0" expanded="false" />
             <element signature="e#2372#2646#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="15" column="47" lean-forward="false" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+          <folding>
+            <element signature="e#127#287#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/windows/lib/email/architecture.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="8" lean-forward="true" selection-start-line="3" selection-start-column="8" selection-end-line="6" selection-end-column="53" />
+          <folding />
         </state>
       </provider>
     </entry>
