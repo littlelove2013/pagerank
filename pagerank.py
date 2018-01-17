@@ -8,6 +8,7 @@
 
 import graph
 import time
+import os
 
 def gcpagerank(beta=0.8,srcfile="data/WikiData.txt",block_cap=2000):
     thre=1e-6
@@ -75,6 +76,8 @@ def gcpagerank(beta=0.8,srcfile="data/WikiData.txt",block_cap=2000):
     top100dict = []
     #做完迭代，将权值写入文本
     print("The final page rank is saving...")
+    if not os.path.exists("./results"):
+        os.mkdir("./results")
     filename="results/all_tp("+str(beta)+")_rankresult.txt"
     with open(filename, "w") as f_w:
 	    for b in range(blocks):
